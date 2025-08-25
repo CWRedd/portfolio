@@ -4,7 +4,7 @@ This website is adapted from [mrinmoy-hex's Portfolio Template]([https://github.
 Original design by mrinmoy-hex, modifications by [CWRedd].  
 
 > ## Preview:
-![Preview.png](https://github.com/MRINMOY662/Modern-Portfolio-Website-Template/blob/main/preview.png)
+![Preview.png](https://github.com/CWRedd/portfolio/blob/main/preview.png)
 
 
 
