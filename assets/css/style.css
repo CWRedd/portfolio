@@ -804,12 +804,20 @@ img {
 
 
 /*==================== CONTACT ME ====================*/
+/*==================== CONTACT ME ====================*/
 .contact__container {
-  row-gap: 3rem;
+  display: grid;            /* use grid to easily manage spacing */
+  justify-items: center;    /* center children horizontally */
+  max-width: 768px;         /* container width */
+  margin: 0 auto;           /* center container on page */
+  row-gap: 3rem;            /* spacing between info and form */
+  padding: 0 1rem;          /* padding for small screens */
 }
 
 .contact__information {
   display: flex;
+  align-items: center;
+  justify-content: center;  /* center GitHub info horizontally */
   margin-bottom: var(--mb-2);
 }
 
@@ -829,6 +837,18 @@ img {
   color: var(--text-color-light);
 }
 
+.contact__form {
+  width: 100%;
+  max-width: 460px;         /* limit form width */
+  display: grid;
+  gap: 1.5rem;              /* spacing between form fields */
+}
+
+.contact__inputs {
+  display: grid;
+  gap: 1.5rem;              /* spacing between name & email fields */
+}
+
 .contact__content {
   background-color: var(--input-color);
   border-radius: .5rem;
@@ -841,63 +861,22 @@ img {
 }
 
 .contact__input {
-
-/*==================== FOOTER ====================*/
-.footer {
-  padding-top: 2rem;
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
 }
 
-.footer__container {
-  row-gap: 3.5rem;
+/* Two-column layout for larger screens */
+@media screen and (min-width: 1024px) {
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-.footer__bg {
-  background-color: var(--first-color);
-  padding: 2rem 0 3rem;
-}
-
-.footer__title {
-  font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-0-25);
-}
-
-.footer__subtitle {
-  font-size: var(--small-font-size);
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-
-.footer__link:hover {
-  color: var(--first-color-lighter);
-}
-
-.footer__social {
-  font-size: 1.25rem;
-  margin-right: var(--mb-1-5);
-}
-
-footer .footer__social a:hover {
-  color: var(--first-color-lighter);
-}
-
-.footer__copy {
-  font-size: var(--smaller-font-size);
-  text-align: center;
-  color: var(--text-color-light);
-  margin-top: var(--mb-3);
-}
-
-.footer__title,
-.footer__subtitle,
-.footer__link,
-.footer__social {
-  color: #fff;
-}
-
 
 /*========== SCROLL UP ==========*/
 .scrollup {
